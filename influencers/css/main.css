@@ -605,4 +605,28 @@ body {
     transform-origin: calc(50% - 800px) calc(50% + 200px);
     animation: moveInCircle 20s ease infinite;
     opacity: 1;
+}
+
+/* Controle de efeitos hover */
+.group {
+    transition: all 0.3s ease;
+}
+
+.group .absolute {
+    transition: opacity 0.3s ease;
+}
+
+/* Desativar efeitos em mobile */
+@media (max-width: 768px) {
+    .group:hover {
+        transform: none !important;
+    }
+    
+    .group:hover .absolute {
+        opacity: 0.3 !important;
+    }
+    
+    .group:hover .border {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
 } 
