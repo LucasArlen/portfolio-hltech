@@ -26,18 +26,27 @@
 </head>
 <body class="min-h-screen bg-[#1a1a1a] text-gray-100 relative overflow-x-hidden">
     <!-- Overlay de fundo elegante -->
-    <div class="fixed inset-0 bg-[url('../assets/images/salon-bg.svg')] bg-cover bg-center bg-no-repeat"></div>
-    <div class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="fixed inset-0 bg-[url('../assets/images/salon-bg.svg')] bg-cover bg-center bg-no-repeat z-0"></div>
+    <div class="fixed inset-0 bg-black/70 backdrop-blur-sm z-0"></div>
+
+    <!-- Banner de Template -->
+    <div class="fixed top-0 left-0 right-0 bg-pink-600 z-[60]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 py-3 sm:py-2 text-xs sm:text-sm md:text-base text-white text-center sm:text-left">
+                <p class="max-w-[90%] sm:max-w-none">Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Botão Voltar ao HL Tech -->
     <a href="../index.html" 
-        class="fixed top-12 left-4 z-50 bg-[#D4AF37] px-4 py-2 rounded-full text-white font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-lg backdrop-blur-sm">
+        class="fixed top-20 left-4 z-[55] bg-[#D4AF37] px-4 py-2 rounded-full text-white font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-lg backdrop-blur-sm">
         <i class="fas fa-arrow-left"></i>
         <span class="hidden sm:inline">Voltar ao HL Tech</span>
     </a>
 
     <!-- Conteúdo Principal -->
-    <div class="relative z-10">
+    <div class="relative z-[40] pt-12">
         <!-- Hero Section -->
         <header class="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div class="container mx-auto px-4 text-center">
@@ -280,16 +289,6 @@
                 </div>
             </div>
         </section>
-    </div>
-
-    <!-- Banner de Template -->
-    <div class="fixed top-0 left-0 right-0 bg-pink-600 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-center gap-2 py-2 text-sm text-white">
-                <i class="fas fa-info-circle"></i>
-                <p>Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
-            </div>
-        </div>
     </div>
 </body>
 </html>
