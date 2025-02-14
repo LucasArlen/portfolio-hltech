@@ -4,19 +4,32 @@ $(document).ready(function() {
         loop: true,
         nav: true,
         items: 5,
+        margin: 20,
+        stagePadding: 30,
         autoplay: false,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
         navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
         responsive:{
             0:{
+                items: 1,
+                margin: 10,
+                stagePadding: 20,
+            },
+            480:{
                 items: 2,
+                margin: 15,
+                stagePadding: 25,
             },
             768:{
                 items: 3,
+                margin: 15,
+                stagePadding: 30,
             },
             990:{
                 items: 5,
+                margin: 20,
+                stagePadding: 30,
             }
         },
         onInitialized: coverFlowEfx,

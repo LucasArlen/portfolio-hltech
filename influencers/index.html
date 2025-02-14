@@ -67,16 +67,8 @@
         </div>
     </div>
 
-    <!-- Camadas de animação -->
-    <div class="fixed inset-0 animated-gradient z-0"></div>
-    <div class="fixed inset-0 wave wave-1 z-[1]"></div>
-    <div class="fixed inset-0 wave wave-2 z-[2]"></div>
-    
     <!-- Overlay -->
     <div class="fixed inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 z-[3]"></div>
-
-    <!-- Canvas -->
-    <canvas id="gradient-canvas" class="z-[4]"></canvas>
 
     <!-- Content Wrapper -->
     <div class="content-wrapper relative z-[40] pt-20">
@@ -102,7 +94,9 @@
                         </div>
                     </div>
 
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 
+                        bg-gradient-to-r from-white to-gray-300
+                        bg-clip-text text-transparent">
                         Digital Influencer
                     </h1>
                     <p class="text-xl text-gray-300 mb-12">Criação de Conteúdo & Marketing Digital</p>
@@ -110,7 +104,7 @@
                     <!-- Social Links -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
                         <a href="#" class="glass-card p-6 rounded-2xl group">
-                            <i class="fab fa-instagram text-3xl text-[#FF3366] mb-3"></i>
+                            <i class="fab fa-instagram text-3xl text-white/90 mb-3"></i>
                             <p class="font-medium text-white">Instagram</p>
                             <span class="text-sm text-gray-300 opacity-80">@seuperfil</span>
                         </a>
@@ -133,7 +127,10 @@
 
                     <!-- Call to Action -->
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="#" class="bg-gradient-to-r from-[#FF3366] to-[#FF6B4D] glass-card px-8 py-3 rounded-full text-white font-medium flex items-center justify-center gap-2">
+                        <a href="#" class="
+                            bg-white/10 hover:bg-white/15
+                            glass-card px-8 py-3 rounded-full text-white font-medium 
+                            flex items-center justify-center gap-2 transition-all">
                             <i class="fab fa-whatsapp"></i>
                             Parcerias
                         </a>
@@ -149,7 +146,7 @@
         <!-- Serviços/Produtos -->
         <section class="py-20">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                     Serviços & Produtos
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -189,7 +186,7 @@
         <!-- Seção de Trabalhos -->
         <section class="py-16">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                     Meus Trabalhos
                 </h2>
                 <div id="carrousel" class="relative -mx-4 md:mx-0">
@@ -424,5 +421,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/gradient.js"></script>
+
+    <!-- Adicionar novas camadas -->
+    <div class="background-grid"></div>
+    <div class="background-gradient"></div>
+    <div class="background-noise"></div>
 </body>
 </html>

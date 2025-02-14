@@ -14,4 +14,17 @@
         rgba(15, 23, 42, 0.8) 50%,
         rgba(15, 23, 42, 0.95) 100%
     );
+}
+
+/* Otimizar efeitos hover para desktop */
+.card-hover {
+    @media (min-width: 768px) {
+        transition: transform 0.3s ease;
+    }
+}
+
+.card-hover:hover {
+    @media (min-width: 768px) {
+        transform: translateY(-5px);
+    }
 } 

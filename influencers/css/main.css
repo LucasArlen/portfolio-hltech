@@ -1,6 +1,6 @@
 /* Estilos base */
 .gradient-bg {
-    background: linear-gradient(135deg, #FF3366 0%, #FF6B4D 50%, #FFB84D 100%);
+    background: linear-gradient(135deg, #2B2B2B 0%, #404040 50%, #2B2B2B 100%);
 }
 
 .glass-effect {
@@ -17,18 +17,20 @@
     position: relative;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.3),
-        0 0 30px rgba(255, 255, 255, 0.1);
+    @media (min-width: 768px) {
+        transform: translateY(-5px) scale(1.02);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.2),
+            0 0 30px rgba(255, 255, 255, 0.05);
+    }
 }
 
 /* Animações de fundo */
@@ -38,39 +40,59 @@
     100% { background-position: 0% 50%; }
 }
 
-.animated-gradient {
-    background: linear-gradient(-45deg, 
-        rgba(255, 51, 102, 0.1),
-        rgba(255, 107, 77, 0.1),
-        rgba(255, 184, 77, 0.1),
-        rgba(255, 51, 102, 0.1)
-    );
-    background-size: 400% 400%;
-    animation: gradient-wave 15s ease infinite;
+/* Novo background minimalista */
+body {
+    background-color: #0a0a0a;
+    position: relative;
+    overflow-x: hidden;
 }
 
-/* Efeitos de onda */
-.wave {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    mix-blend-mode: overlay;
-}
-
-/* Canvas gradiente */
-#gradient-canvas {
+/* Novo efeito de grid sutil */
+.background-grid {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: 1;
+}
+
+/* Novo efeito de gradiente sutil */
+.background-gradient {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(50, 50, 50, 0.15),
+        rgba(0, 0, 0, 0) 70%
+    );
+    z-index: 2;
+}
+
+/* Efeito de noise sutil */
+.background-noise {
+    position: fixed;
+    inset: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj4KICA8ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+CiAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPgogIDwvZmlsdGVyPgogIDxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIiBmaWx0ZXI9InVybCgjbm9pc2UpIiBvcGFjaXR5PSIwLjA1Ii8+Cjwvc3ZnPg==');
     opacity: 0.4;
-    --gradient-color-1: #FF3366; 
-    --gradient-color-2: #FF6B4D; 
-    --gradient-color-3: #FFB84D;
-    --gradient-color-4: #FF3366;
+    z-index: 3;
+}
+
+/* Atualizar overlay */
+.fixed.inset-0.bg-gradient-to-b {
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.7) 0%,
+        rgba(0,0,0,0.3) 40%,
+        rgba(0,0,0,0.7) 100%
+    );
+    z-index: 4;
+}
+
+/* Atualizar o canvas */
+#gradient-canvas {
+    display: none; /* Removendo o canvas antigo */
 }
 
 /* Estilos da imagem de perfil */
@@ -94,7 +116,7 @@
     inset: 0;
     border-radius: 50%;
     padding: 4px;
-    background: linear-gradient(135deg, #FF3366, #FF6B4D, #FFB84D, #FF3366);
+    background: linear-gradient(135deg, #ffffff, #cccccc, #ffffff, #cccccc);
     -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
@@ -109,10 +131,10 @@
     border-radius: 50%;
     background: linear-gradient(
         135deg,
-        #FF336680,
-        #FF6B4D80,
-        #FFB84D80,
-        #FF336680
+        rgba(255, 255, 255, 0.3),
+        rgba(204, 204, 204, 0.3),
+        rgba(255, 255, 255, 0.3),
+        rgba(204, 204, 204, 0.3)
     );
     filter: blur(20px);
     opacity: 0.5;
@@ -186,11 +208,15 @@
 }
 
 .carousel-slide img {
-    transition: transform 0.3s ease;
+    @media (min-width: 768px) {
+        transition: transform 0.3s ease;
+    }
 }
 
 .carousel-slide:hover img {
-    transform: scale(1.05);
+    @media (min-width: 768px) {
+        transform: scale(1.05);
+    }
 }
 
 @keyframes fadeInUp {
@@ -317,7 +343,10 @@
 }
 
 #carrousel {
-    margin: 10px;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -332,8 +361,15 @@
     width: auto;
     height: 300px;
     object-fit: cover;
+    border-radius: 8px;
     transition: all 0.2s ease;
     box-shadow: 12px 12px 10px -10px rgba(0, 0, 0, 0.25);
+    @media (max-width: 768px) {
+        height: 250px;
+    }
+    @media (max-width: 480px) {
+        height: 200px;
+    }
 }
 
 #carrousel .owl-carousel .owl-item {
@@ -342,6 +378,12 @@
     transform: scale(0.7);
     transition: all 0.2s;
     z-index: 1;
+    @media (max-width: 768px) {
+        height: 250px;
+    }
+    @media (max-width: 480px) {
+        height: 200px;
+    }
 }
 
 #carrousel .owl-item.big {
@@ -356,24 +398,24 @@
 
 #carrousel .owl-item.medium.mdright {
     position: relative;
-    left: -30px;
+    left: 0;
 }
 
 #carrousel .owl-item.medium.mdleft {
     position: relative;
-    right: -30px;
+    right: 0;
 }
 
 #carrousel .owl-item.smallRight.active {
     transform: scale(0.7);
     position: relative;
-    left: -30px;
+    left: 0;
 }
 
 #carrousel .owl-item.smallLeft.active {
     transform: scale(0.7);
     position: relative;
-    right: -30px;
+    right: 0;
 }
 
 #carrousel .owl-nav {
