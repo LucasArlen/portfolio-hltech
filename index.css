@@ -1,0 +1,23 @@
+/* Adicionar ao seu CSS */
+.group {
+    transition: all 0.3s ease;
+}
+
+.group .absolute {
+    transition: opacity 0.3s ease;
+}
+
+/* Desativar efeitos em mobile */
+@media (max-width: 768px) {
+   .group:hover {
+       transform: none !important;
+   }
+   
+   .group:hover .absolute {
+       opacity: 0.3 !important;
+   }
+   
+   .group:hover .border {
+       border-color: rgba(255, 255, 255, 0.1) !important;
+   }
+} 
