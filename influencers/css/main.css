@@ -24,12 +24,27 @@
 
 .glass-card:hover {
     @media (min-width: 768px) {
-        transform: translateY(-5px) scale(1.02);
+        transform: translateY(-3px);
         background: rgba(255, 255, 255, 0.08);
         border-color: rgba(255, 255, 255, 0.2);
         box-shadow: 
             0 10px 30px rgba(0, 0, 0, 0.2),
             0 0 30px rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Ajustar os cards de serviços */
+.glass-card.text-center.group {
+    transition: all 0.3s ease;
+}
+
+.glass-card.text-center.group i {
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .glass-card.text-center.group:hover i {
+        transform: translateY(-2px);
     }
 }
 
@@ -42,9 +57,10 @@
 
 /* Novo background minimalista */
 body {
-    background-color: #0a0a0a;
-    position: relative;
+    min-height: 100vh;
+    min-height: -webkit-fill-available; /* Corrige altura no iOS */
     overflow-x: hidden;
+    background: var(--color-bg1); /* Cor sólida de fallback */
 }
 
 /* Novo efeito de grid sutil */
@@ -344,14 +360,26 @@ body {
 
 #carrousel {
     margin: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     overflow: hidden;
 }
 
 @media (max-width: 768px) {
     #carrousel {
-        margin: 70px 0px 0px 0px;
+        margin: 20px 0 0 0;
+    }
+
+    /* Ajustar espaçamento da seção inteira */
+    section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* Reduzir espaçamento entre seções */
+    .py-16, .py-20 {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
@@ -491,6 +519,7 @@ body {
 .gradient-bg {
     width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available; /* Corrige altura no iOS */
     position: fixed;
     overflow: hidden;
     background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
