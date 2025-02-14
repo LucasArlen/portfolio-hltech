@@ -15,11 +15,11 @@
     <!-- CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="preload" href="../assets/images/feijoada.jpeg" as="image">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <script src="./scripts/countdown.js" defer></script>
+    <script src="./js/countdown.js" defer></script>
 </head>
 <body class="bg-[#0F172A] text-gray-100 overflow-x-hidden">
     <!-- Banner de Template -->
@@ -32,14 +32,14 @@
     </div>
 
     <!-- Imagem de Fundo com Overlay -->
-    <div class="fixed inset-0 z-0">
+    <div class="fixed inset-0 -z-10">
         <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a?auto=format&fit=crop&w=2000" 
              alt="Feijoada Background" 
              class="w-full h-full object-cover"
              loading="eager"
         >
     </div>
-    <div class="fixed inset-0 bg-overlay z-[1]"></div>
+    <div class="fixed inset-0 bg-overlay -z-5"></div>
 
     <!-- Hero Section -->
     <header class="min-h-screen relative flex items-center z-[40] pt-20">
@@ -115,7 +115,7 @@
     </header>
 
     <!-- Seção de Atrações -->
-    <section class="py-20 relative">
+    <section class="py-20 relative z-[40]">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 gradient-text text-center">
                 Atrações do Dia
@@ -195,7 +195,7 @@
     </section>
 
     <!-- Atividades Extras -->
-    <section class="py-20 relative">
+    <section class="py-20 relative z-[40]">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 gradient-text text-center">
                 Atividades Extras
@@ -229,7 +229,7 @@
         </div>
     </section>
 
-    <footer class="py-12 bg-black/50">
+    <footer class="py-12 bg-black/50 relative z-[40]">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-2xl font-bold text-[#D4AF37] mb-4">Informações e Reservas</h2>
