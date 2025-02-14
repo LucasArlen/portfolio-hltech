@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schay'havila Suzy - Digital Influencer Portfolio</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Portfolio profissional de Schay'havila Suzy - Influenciadora Digital e Criadora de Conteúdo. Parcerias, campanhas e projetos.">
+    <meta name="keywords" content="influenciador digital, criador de conteúdo, marketing digital, redes sociais">
+    
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Schay'havila Suzy - Digital Influencer">
+    <meta property="og:description" content="Portfolio profissional de Schay'havila Suzy - Influenciadora Digital e Criadora de Conteúdo">
+    <meta property="og:image" content="../assets/images/influencer-bg.jpeg">
+    <meta property="og:url" content="https://seusite.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    
+    <!-- Existing CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload imagens críticas -->
+    <link rel="preload" as="image" href="../assets/images/influencer-bg.jpeg">
+    
+    <!-- PWA Support -->
+    <meta name="theme-color" content="#1a1a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Schay'havila Suzy",
+        "jobTitle": "Digital Influencer",
+        "url": "https://seusite.com",
+        "sameAs": [
+            "https://instagram.com/seuperfil",
+            "https://tiktok.com/@seuperfil",
+            "https://youtube.com/@seuperfil"
+        ]
+    }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-purple-900 to-indigo-900 text-white min-h-screen">
+    <!-- Banner de Template -->
+    <div class="fixed top-0 left-0 right-0 bg-purple-600 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center gap-2 py-2 text-sm text-white">
+                <i class="fas fa-info-circle"></i>
+                <p>Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adicionar as camadas de animação logo após a abertura do body -->
+    <div class="fixed inset-0 animated-gradient"></div>
+    <div class="fixed inset-0 wave wave-1"></div>
+    <div class="fixed inset-0 wave wave-2"></div>
+    
+    <!-- Adicionar um overlay para melhorar a legibilidade -->
+    <div class="fixed inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50"></div>
+
+    <!-- Adicionar logo após a abertura do body -->
+    <canvas id="gradient-canvas"></canvas>
+
+    <!-- Envolver todo o conteúdo existente em um div com class content-wrapper -->
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Conteúdo Principal -->
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Avatar -->
+                    <div class="mb-8 relative inline-block profile-container">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring"></div>
+                        <div class="profile-image">
+                            <img 
+                                src="../assets/images/influencer-bg.jpeg" 
+                                alt="Schay'havila Suzy" 
+                                class="w-full h-full object-cover"
+                                loading="eager"
+                                width="200"
+                                height="200"
+                                fetchpriority="high"
+                            >
+                        </div>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                        Schay'havila Suzy
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-12">Influenciador Digital & Criador de Conteúdo</p>
+
+                    <!-- Social Links -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-12">
+                        <a href="#" class="glass-card p-6 rounded-2xl group">
+                            <i class="fab fa-instagram text-3xl text-[#FF3366] mb-3"></i>
+                            <p class="font-medium text-white">Instagram</p>
+                            <span class="text-sm text-gray-300 opacity-80">@seuperfil</span>
+                        </a>
+                        <a href="#" class="glass-card p-6 rounded-2xl group">
+                            <i class="fab fa-tiktok text-3xl text-white mb-3"></i>
+                            <p class="font-medium text-white">TikTok</p>
+                            <span class="text-sm text-gray-300 opacity-80">@seuperfil</span>
+                        </a>
+                        <a href="#" class="glass-card p-6 rounded-2xl group">
+                            <i class="fab fa-youtube text-3xl text-[#FF6B4D] mb-3"></i>
+                            <p class="font-medium text-white">YouTube</p>
+                            <span class="text-sm text-gray-300 opacity-80">@seuperfil</span>
+                        </a>
+                        <a href="#" class="glass-card p-6 rounded-2xl group">
+                            <i class="fas fa-shopping-bag text-3xl text-[#FFB84D] mb-3"></i>
+                            <p class="font-medium text-white">Loja</p>
+                            <span class="text-sm text-gray-300 opacity-80">Produtos</span>
+                        </a>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#" class="bg-gradient-to-r from-[#FF3366] to-[#FF6B4D] glass-card px-8 py-3 rounded-full text-white font-medium flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i>
+                            Parcerias
+                        </a>
+                        <a href="#" class="glass-card px-8 py-3 rounded-full text-white font-medium flex items-center justify-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            Contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Serviços/Produtos -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                    Serviços & Produtos
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="glass-card p-6 rounded-2xl text-center group hover:scale-105 transition-transform">
+                        <i class="fas fa-ad text-3xl text-[#FF3366] mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-xl font-semibold text-white mb-2">Publicidade</h3>
+                        <p class="text-gray-300 mb-4">Divulgação de marcas e produtos para minha audiência</p>
+                        <ul class="text-sm text-gray-400 space-y-2 text-left">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#FF3366] mr-2"></i>
+                                Stories e Posts
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#FF3366] mr-2"></i>
+                                Reviews detalhados
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-[#FF3366] mr-2"></i>
+                                Campanhas completas
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <i class="fas fa-camera text-3xl text-[#FF6B4D] mb-4"></i>
+                        <h3 class="text-xl font-semibold text-white mb-2">Conteúdo</h3>
+                        <p class="text-gray-300">Produção de fotos e vídeos para sua marca</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <i class="fas fa-store text-3xl text-[#FFB84D] mb-4"></i>
+                        <h3 class="text-xl font-semibold text-white mb-2">Produtos</h3>
+                        <p class="text-gray-300">Linha exclusiva de produtos próprios</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adicionar após a seção de redes sociais -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                    Meus Trabalhos
+                </h2>
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Removendo overflow hidden do container para permitir o efeito de fade nas bordas -->
+                    <div class="relative">
+                        <!-- Gradientes de fade nas bordas -->
+                        <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#1a1a1a] to-transparent z-10"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#1a1a1a] to-transparent z-10"></div>
+                        
+                        <!-- Container do carrossel com scroll horizontal -->
+                        <div class="carousel-container overflow-x-auto hide-scrollbar">
+                            <div class="carousel-track flex gap-4 pb-4">
+                                <!-- Cards de trabalho -->
+                                <div class="carousel-slide min-w-[280px] glass-card rounded-2xl overflow-hidden">
+                                    <div class="relative aspect-[9/16]">
+                                        <img 
+                                            src="../assets/images/Work1.webp" 
+                                            alt="Campanha Verão" 
+                                            class="w-full h-full object-cover"
+                                            loading="lazy"
+                                            width="280"
+                                            height="498"
+                                        >
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 p-4">
+                                            <h3 class="text-lg font-bold text-white mb-1">Campanha Verão</h3>
+                                            <p class="text-sm text-gray-200">Marca X</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-slide min-w-[280px] glass-card rounded-2xl overflow-hidden">
+                                    <div class="relative aspect-[9/16]">
+                                        <img src="../assets/images/Work2.jpg" alt="Look do Dia" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 p-4">
+                                            <h3 class="text-lg font-bold text-white mb-1">Look do Dia</h3>
+                                            <p class="text-sm text-gray-200">Marca Y</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-slide min-w-[280px] glass-card rounded-2xl overflow-hidden">
+                                    <div class="relative aspect-[9/16]">
+                                        <img src="../assets/images/Work3.jpg" alt="Maquiagem" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 p-4">
+                                            <h3 class="text-lg font-bold text-white mb-1">Maquiagem</h3>
+                                            <p class="text-sm text-gray-200">Marca Z</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-slide min-w-[280px] glass-card rounded-2xl overflow-hidden">
+                                    <div class="relative aspect-[9/16]">
+                                        <img src="../assets/images/Work4.jpg" alt="Skincare" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 p-4">
+                                            <h3 class="text-lg font-bold text-white mb-1">Skincare</h3>
+                                            <p class="text-sm text-gray-200">Marca W</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-slide min-w-[280px] glass-card rounded-2xl overflow-hidden">
+                                    <div class="relative aspect-[9/16]">
+                                        <img src="../assets/images/Work5.jpg" alt="Lifestyle" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                        <div class="absolute bottom-0 left-0 p-4">
+                                            <h3 class="text-lg font-bold text-white mb-1">Lifestyle</h3>
+                                            <p class="text-sm text-gray-200">Marca V</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estatísticas -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <div class="text-3xl font-bold text-white mb-2">500K+</div>
+                        <p class="text-gray-300">Seguidores</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <div class="text-3xl font-bold text-white mb-2">100+</div>
+                        <p class="text-gray-300">Parcerias</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <div class="text-3xl font-bold text-white mb-2">1M+</div>
+                        <p class="text-gray-300">Likes</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center">
+                        <div class="text-3xl font-bold text-white mb-2">50+</div>
+                        <p class="text-gray-300">Campanhas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-[#FF3366] to-[#FFB84D] bg-clip-text text-transparent">
+                    Depoimentos
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-shopping-bag text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Fashion Style</h3>
+                                <p class="text-gray-400 text-sm">Parceria de 2 anos</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"Resultados excepcionais em todas as campanhas. Profissionalismo e autenticidade incomparáveis. Nossas vendas aumentaram 300% após as parcerias."</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-gem text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Luxury Beauty</h3>
+                                <p class="text-gray-400 text-sm">Parceria de 1 ano</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"A forma como ela apresenta nossos produtos é única. Sua autenticidade e conexão com o público trouxe resultados surpreendentes para nossa marca."</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-teal-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-leaf text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Eco Cosmetics</h3>
+                                <p class="text-gray-400 text-sm">Parceria de 6 meses</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"Sua dedicação em entender nossa missão sustentável e transmitir isso ao público foi fundamental. Engajamento orgânico impressionante!"</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-yellow-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-utensils text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Gourmet Foods</h3>
+                                <p class="text-gray-400 text-sm">Parceria recorrente</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"A criatividade nas apresentações dos nossos produtos é incrível. Cada campanha supera nossas expectativas em alcance e conversão."</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-tshirt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Urban Wear</h3>
+                                <p class="text-gray-400 text-sm">Parceria trimestral</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"Nossa coleção esgotou em 48h após o lançamento com ela. A forma natural de apresentar as peças cria uma conexão única com o público."</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-red-400 flex items-center justify-center mr-4">
+                                <i class="fas fa-spa text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold">Wellness Spa</h3>
+                                <p class="text-gray-400 text-sm">Parceria mensal</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300">"O engajamento do público com nossos serviços cresceu exponencialmente. Sua forma de comunicar bem-estar é exatamente o que buscávamos."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center text-gray-400">
+            <div class="container mx-auto px-4">
+                <p class="text-sm">© 2024 Todos os direitos reservados</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Botão Voltar ao HL Tech -->
+    <a href="../index.html" class="fixed top-12 left-4 z-50 bg-gradient-to-r from-[#FF3366] to-[#FF6B4D] px-4 py-2 rounded-full text-white font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-lg backdrop-blur-sm">
+        <i class="fas fa-arrow-left"></i>
+        <span class="hidden sm:inline">Voltar ao HL Tech</span>
+    </a>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-[#FF3366] to-[#FF6B4D] p-3 rounded-full text-white opacity-0 transition-all duration-300 translate-y-10">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel-container');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.style.cursor = 'grabbing';
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                carousel.style.cursor = 'grab';
+            });
+
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                carousel.style.cursor = 'grab';
+            });
+
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2; // Velocidade do scroll
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+
+            // Suporte para touch events
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
+
+            carousel.addEventListener('touchmove', (e) => {
+                if (!startX) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+
+            carousel.addEventListener('touchend', () => {
+                startX = null;
+            });
+        });
+
+        // Adicionar ao seu script existente
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <script src="./js/gradient.js"></script>
+</body>
+</html>

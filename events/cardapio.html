@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Feijoada do Chef</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body class="bg-[#0F172A] text-gray-100 overflow-x-hidden">
+    <!-- Alerta de Template -->
+    <div class="bg-yellow-600">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center gap-2 py-2 text-sm text-white">
+                <i class="fas fa-info-circle"></i>
+                <p>Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botões de Navegação -->
+    <div class="fixed top-4 left-4 z-50 flex gap-4">
+        <a href="./index.html" class="bg-yellow-500/90 backdrop-blur-sm px-4 py-2 rounded-full text-gray-900 font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-lg mt-8">
+            <i class="fas fa-arrow-left"></i>
+            <span class="hidden sm:inline">Voltar ao Evento</span>
+        </a>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mx-auto px-4 py-20">
+        <h1 class="text-5xl md:text-6xl font-black mb-12 gradient-text text-center">Cardápio</h1>
+
+        <!-- Prato Principal -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-yellow-500">Prato Principal</h2>
+            <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <img 
+                        src="../assets/images/feijoada.jpeg" 
+                        alt="Feijoada Completa" 
+                        class="w-full h-[400px] object-cover"
+                    >
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Feijoada Completa</h3>
+                        <p class="text-gray-400 mb-6">Nossa tradicional feijoada preparada com carnes selecionadas e temperos especiais.</p>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-yellow-500"></i>
+                                Feijão preto especial
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-yellow-500"></i>
+                                Diversas carnes nobres
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-check text-yellow-500"></i>
+                                Temperos da casa
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acompanhamentos -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-yellow-500">Acompanhamentos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=500"
+                        alt="Arroz Branco" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Arroz Branco</h3>
+                        <p class="text-gray-400">Arroz soltinho e perfumado</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500"
+                        alt="Couve Refogada" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Couve Refogada</h3>
+                        <p class="text-gray-400">Couve fresca na manteiga</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="../assets/images/farofa.webp"
+                        alt="Farofa Especial" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Farofa Especial</h3>
+                        <p class="text-gray-400">Farofa da casa com bacon</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adicionar seção de carnes -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-yellow-500">Carnes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500"
+                        alt="Costela" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-4">
+                        <h3 class="font-bold">Costela</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1624174503860-478619028ab3?auto=format&fit=crop&w=500"
+                        alt="Paio" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-4">
+                        <h3 class="font-bold">Toucinho</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1551135020-39e4ca508d9b?auto=format&fit=crop&w=500"
+                        alt="Linguiça" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-4">
+                        <h3 class="font-bold">Linguiça</h3>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1528607929212-2636ec44253e?auto=format&fit=crop&w=500"
+                        alt="Bacon" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-4">
+                        <h3 class="font-bold">Bacon</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Complementos -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-yellow-500">Complementos</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-lemon text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Laranja</h3>
+                    <p class="text-gray-400 text-sm">Laranja fresca</p>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-pepper-hot text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Pimenta</h3>
+                    <p class="text-gray-400 text-sm">Várias opções</p>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-seedling text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Vinagrete</h3>
+                    <p class="text-gray-400 text-sm">Bem fresquinho</p>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl text-center">
+                    <i class="fas fa-bacon text-yellow-500 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-2">Torresmo</h3>
+                    <p class="text-gray-400 text-sm">Crocante</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bebidas -->
+        <section>
+            <h2 class="text-3xl font-bold mb-8 text-yellow-500">Bebidas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?auto=format&fit=crop&w=500"
+                        alt="Cerveja" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cerveja</h3>
+                        <p class="text-gray-400">Diversas marcas</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=500"
+                        alt="Refrigerante" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Refrigerante</h3>
+                        <p class="text-gray-400">Várias opções</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden group">
+                    <img 
+                        src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500"
+                        alt="Suco Natural" 
+                        class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                    >
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Suco Natural</h3>
+                        <p class="text-gray-400">Laranja e Limão</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 

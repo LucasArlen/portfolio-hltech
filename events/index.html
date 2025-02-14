@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feijoada do Chef - Evento Gastronômico</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Feijoada do Chef - O melhor evento gastronômico da região com música ao vivo, ambiente familiar e a tradicional feijoada completa.">
+    <meta name="keywords" content="feijoada, evento gastronômico, música ao vivo, samba, comida brasileira">
+    <meta property="og:type" content="event">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="theme-color" content="#0F172A">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preload" href="../assets/images/feijoada.jpeg" as="image">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <script src="./scripts/countdown.js" defer></script>
+</head>
+<body class="bg-[#0F172A] text-gray-100 overflow-x-hidden">
+    <!-- Banner de Template -->
+    <div class="fixed top-0 left-0 right-0 bg-yellow-600 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center gap-2 py-2 text-sm text-white">
+                <i class="fas fa-info-circle"></i>
+                <p>Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagem de Fundo com Overlay -->
+    <div class="fixed inset-0 -z-20">
+        <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a?auto=format&fit=crop&w=2000" 
+             alt="Feijoada Background" 
+             class="w-full h-full object-cover"
+             loading="eager"
+        >
+    </div>
+    <div class="fixed inset-0 bg-overlay -z-10"></div>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen relative flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl">
+                <h1 class="text-6xl md:text-8xl font-black mb-6 gradient-text leading-tight">
+                    Feijoada<br>do Chef
+                </h1>
+                
+                <p class="text-xl md:text-3xl text-gray-300 mb-8 max-w-2xl">
+                    Uma experiência gastronômica única com a melhor feijoada da região, música ao vivo e ambiente acolhedor
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <div class="bg-yellow-500/90 backdrop-blur-sm text-gray-900 px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2">
+                        <i class="fas fa-ticket-alt"></i>
+                        <span class="text-lg">Ingresso na Hora • R$ 45,00</span>
+                    </div>
+                    <a href="cardapio.html" class="border-2 border-yellow-500/90 backdrop-blur-sm text-yellow-500 px-8 py-4 rounded-full font-bold hover:bg-yellow-500/90 hover:text-gray-900 transition-colors flex items-center justify-center gap-2 group">
+                        <i class="fas fa-utensils group-hover:rotate-12 transition-transform"></i>
+                        <span class="text-lg">Ver Cardápio</span>
+                    </a>
+                </div>
+
+                <!-- Adicionar o contador após os botões -->
+                <div class="mb-12">
+                    <p class="text-yellow-500 mb-4 font-medium">Contagem Regressiva</p>
+                    <div class="grid grid-cols-4 gap-4 max-w-xl">
+                        <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 text-center">
+                            <span class="text-3xl font-bold text-white countdown-days">00</span>
+                            <p class="text-sm text-gray-400">Dias</p>
+                        </div>
+                        <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 text-center">
+                            <span class="text-3xl font-bold text-white countdown-hours">00</span>
+                            <p class="text-sm text-gray-400">Horas</p>
+                        </div>
+                        <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 text-center">
+                            <span class="text-3xl font-bold text-white countdown-minutes">00</span>
+                            <p class="text-sm text-gray-400">Minutos</p>
+                        </div>
+                        <div class="bg-gray-900/50 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 text-center">
+                            <span class="text-3xl font-bold text-white countdown-seconds">00</span>
+                            <p class="text-sm text-gray-400">Segundos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards de Informação -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
+                        <i class="fas fa-calendar text-yellow-500 text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-1">Data</h3>
+                        <p class="text-gray-400">7 de Julho de 2077</p>
+                    </div>
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
+                        <i class="fas fa-clock text-yellow-500 text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-1">Horário</h3>
+                        <p class="text-gray-400">12h às 17h</p>
+                    </div>
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
+                        <i class="fas fa-map-marker-alt text-yellow-500 text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-1">Local</h3>
+                        <p class="text-gray-400">Espaço Gourmet</p>
+                    </div>
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
+                        <i class="fas fa-music text-yellow-500 text-3xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-1">Música</h3>
+                        <p class="text-gray-400">Samba ao Vivo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção de Atrações -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 gradient-text text-center">
+                Atrações do Dia
+            </h2>
+
+            <div class="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
+                <!-- Atração Principal -->
+                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 group hover:border-yellow-500/50 transition-colors">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <img src="https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?auto=format&fit=crop&w=300" 
+                             alt="Banda Raízes do Samba" 
+                             class="w-48 h-48 object-cover rounded-xl group-hover:scale-105 transition-transform"
+                        >
+                        <div>
+                            <span class="text-yellow-500 font-medium">Atração Principal • 14h</span>
+                            <h3 class="text-2xl font-bold mb-2">Banda Raízes do Samba</h3>
+                            <p class="text-gray-400 mb-4">O melhor do samba e pagode com a banda mais querida da região!</p>
+                            <div class="flex gap-2">
+                                <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm">Samba</span>
+                                <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm">Pagode</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda Atração Principal -->
+                <div class="bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 group hover:border-yellow-500/50 transition-colors">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=300" 
+                             alt="Grupo Samba de Raiz" 
+                             class="w-48 h-48 object-cover rounded-xl group-hover:scale-105 transition-transform"
+                        >
+                        <div>
+                            <span class="text-yellow-500 font-medium">Atração Especial • 15h30</span>
+                            <h3 class="text-2xl font-bold mb-2">Grupo Samba de Raiz</h3>
+                            <p class="text-gray-400 mb-4">Trazendo o melhor do samba tradicional com músicos da velha guarda!</p>
+                            <div class="flex gap-2">
+                                <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm">Samba de Raiz</span>
+                                <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-sm">Chorinho</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid de Outras Atrações -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Roda de Samba -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
+                        <span class="text-yellow-500 text-sm">12h às 14h</span>
+                        <h3 class="text-xl font-bold mb-2">Roda de Samba</h3>
+                        <p class="text-gray-400">Com os melhores sambistas da cidade</p>
+                    </div>
+
+                    <!-- Grupo Nosso Samba -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
+                        <span class="text-yellow-500 text-sm">14h30 às 15h30</span>
+                        <h3 class="text-xl font-bold mb-2">Grupo Nosso Samba</h3>
+                        <p class="text-gray-400">O melhor do samba raiz</p>
+                    </div>
+
+                    <!-- Viola Caipira -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
+                        <span class="text-yellow-500 text-sm">16h às 17h</span>
+                        <h3 class="text-xl font-bold mb-2">Viola Caipira</h3>
+                        <p class="text-gray-400">Zé do Vale e sua viola encantada</p>
+                    </div>
+
+                    <!-- Bingo -->
+                    <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
+                        <span class="text-yellow-500 text-sm">15h</span>
+                        <h3 class="text-xl font-bold mb-2">Bingo Beneficente</h3>
+                        <p class="text-gray-400">Prêmios especiais para toda família</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atividades Extras -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 gradient-text text-center">
+                Atividades Extras
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors text-center">
+                    <i class="fas fa-dice text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Jogos de Mesa</h4>
+                    <p class="text-gray-400">Truco, Dominó e mais</p>
+                </div>
+                
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors text-center">
+                    <i class="fas fa-futbol text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Área de Recreação</h4>
+                    <p class="text-gray-400">Para as crianças</p>
+                </div>
+                
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors text-center">
+                    <i class="fas fa-gift text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Sorteios</h4>
+                    <p class="text-gray-400">Prêmios toda hora</p>
+                </div>
+                
+                <div class="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-500/50 transition-colors text-center">
+                    <i class="fas fa-store text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Feira de Artesanato</h4>
+                    <p class="text-gray-400">Produtos locais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black/50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl font-bold text-[#D4AF37] mb-4">Informações e Reservas</h2>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <a href="tel:+5511999999999" class="flex items-center gap-2 text-gray-300 hover:text-yellow-500">
+                        <i class="fas fa-phone"></i>
+                        (11) 99999-9999
+                    </a>
+                    <span class="hidden sm:inline text-gray-600">|</span>
+                    <a href="https://wa.me/5511999999999" class="flex items-center gap-2 text-gray-300 hover:text-yellow-500">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+                <p class="text-gray-400">Rua das Delícias, 123 - Centro</p>
+                <p class="text-sm text-gray-500 mt-8">© 2024 Feijoada do Chef - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao HL Tech -->
+    <a href="../index.html" 
+        class="fixed top-12 left-4 z-50 bg-yellow-500/90 backdrop-blur-sm px-4 py-2 rounded-full text-gray-900 font-medium flex items-center gap-2 hover:scale-105 transition-all shadow-lg">
+        <i class="fas fa-arrow-left"></i>
+        <span class="hidden sm:inline">Voltar ao HL Tech</span>
+    </a>
+</body>
+</html> 
