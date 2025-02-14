@@ -975,14 +975,36 @@
     <div data-overlay class="overlay fixed inset-0 z-40"></div>
 
     <a href="https://wa.me/5511999999999" 
-       class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50">
+       class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-[70]">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
-            class="fixed bottom-4 left-4 bg-gray-800 text-white p-4 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-50">
+    <!-- Botão Voltar ao Topo - Movido para esquerda -->
+    <button id="backToTop"
+            class="fixed bottom-8 left-8 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-all z-[70] invisible opacity-0 translate-y-10">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > (document.documentElement.scrollHeight * 0.5)) {
+                backToTop.classList.remove('invisible');
+                backToTop.classList.remove('opacity-0', 'translate-y-10');
+            } else {
+                backToTop.classList.add('opacity-0', 'translate-y-10');
+                backToTop.classList.add('invisible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 
     <!-- Adicionar menu mobile -->
     <div data-mobile-menu class="mobile-menu fixed inset-y-0 left-0 w-80 bg-white shadow-lg z-50 overflow-y-auto">
