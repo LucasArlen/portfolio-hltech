@@ -1,91 +1,59 @@
-class Carousel {
-    constructor() {
-        this.carousel = document.querySelector('.carousel');
-        this.track = this.carousel.querySelector('.carousel-track');
-        this.slides = this.carousel.querySelectorAll('.carousel-slide');
-        this.prevButton = this.carousel.querySelector('.carousel-prev');
-        this.nextButton = this.carousel.querySelector('.carousel-next');
-        this.indicators = this.carousel.querySelectorAll('.carousel-indicators button');
-        
-        this.currentSlide = 0;
-        this.slideCount = this.slides.length;
-        
-        this.init();
-    }
-
-    init() {
-        // Configurar eventos
-        this.prevButton.addEventListener('click', () => this.prev());
-        this.nextButton.addEventListener('click', () => this.next());
-        
-        // Indicadores
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => this.goToSlide(index));
-        });
-
-        // Touch events para mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        this.track.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        this.track.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchStartX - touchEndX > 50) {
-                this.next();
-            } else if (touchEndX - touchStartX > 50) {
-                this.prev();
+$(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+        center: true,
+        loop: true,
+        nav: true,
+        items: 5,
+        autoplay: false,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+        responsive:{
+            0:{
+                items: 2,
+            },
+            768:{
+                items: 3,
+            },
+            990:{
+                items: 5,
             }
-        });
+        },
+        onInitialized: coverFlowEfx,
+        onTranslate: coverFlowEfx,
+    });
 
-        // Atualizar indicador inicial
-        this.updateIndicators();
+    // Controle de Autoplay
+    var isPlaying = false;
+    
+    $('#play-carousel').click(function(evt) {
+        isPlaying = !isPlaying;
+        if(isPlaying){
+            $('.status').html('Autoplay: ON');
+            $('.owl-carousel').trigger('play.owl.autoplay', [2000]);
+            $(this).html("Stop");
+        } else {
+            $('.owl-carousel').trigger('stop.owl.autoplay');
+            $(this).html("Play");
+            $('.status').html('Autoplay: OFF');
+        }
+    });
+});
 
-        // Auto play opcional
-        this.startAutoPlay();
+function coverFlowEfx(e){
+    if ($('.owl-dots')) {
+        $('.owl-dots').remove();
     }
-
-    prev() {
-        this.currentSlide = (this.currentSlide - 1 + this.slideCount) % this.slideCount;
-        this.updateSlide();
-    }
-
-    next() {
-        this.currentSlide = (this.currentSlide + 1) % this.slideCount;
-        this.updateSlide();
-    }
-
-    goToSlide(index) {
-        this.currentSlide = index;
-        this.updateSlide();
-    }
-
-    updateSlide() {
-        const offset = -this.currentSlide * 100;
-        this.track.style.transform = `translateX(${offset}%)`;
-        this.updateIndicators();
-    }
-
-    updateIndicators() {
-        this.indicators.forEach((indicator, index) => {
-            if (index === this.currentSlide) {
-                indicator.classList.add('bg-white');
-                indicator.classList.remove('bg-white/30');
-            } else {
-                indicator.classList.remove('bg-white');
-                indicator.classList.add('bg-white/30');
-            }
-        });
-    }
-
-    startAutoPlay() {
-        setInterval(() => this.next(), 5000); // Muda slide a cada 5 segundos
-    }
-}
-
-// Inicializar quando o DOM estiver pronto
-document.addEventListener('DOMContentLoaded', () => {
-    new Carousel();
-}); 
+    idx = e.item.index;
+    $('.owl-item.big').removeClass('big');
+    $('.owl-item.medium').removeClass('medium');
+    $('.owl-item.mdright').removeClass('mdright');
+    $('.owl-item.mdleft').removeClass('mdleft');
+    $('.owl-item.smallRight').removeClass('smallRight');
+    $('.owl-item.smallLeft').removeClass('smallLeft');
+    $('.owl-item').eq(idx -1).addClass('medium mdleft');
+    $('.owl-item').eq(idx).addClass('big');
+    $('.owl-item').eq(idx + 1).addClass('medium mdright');
+    $('.owl-item').eq(idx + 2).addClass('smallRight');
+    $('.owl-item').eq(idx - 2).addClass('smallLeft');
+} 
