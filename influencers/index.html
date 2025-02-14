@@ -52,7 +52,7 @@
 </head>
 <body class="bg-gradient-to-br from-purple-900 to-indigo-900 text-white min-h-screen">
     <!-- Banner de Template -->
-    <div class="fixed top-0 left-0 right-0 bg-purple-600 z-50">
+    <div class="fixed top-0 left-0 right-0 bg-purple-600 z-[60]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row items-center justify-center gap-2 py-3 sm:py-2 text-xs sm:text-sm md:text-base text-white text-center sm:text-left">
                 <p class="max-w-[90%] sm:max-w-none">Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
@@ -60,19 +60,19 @@
         </div>
     </div>
 
-    <!-- Adicionar as camadas de animação logo após a abertura do body -->
-    <div class="fixed inset-0 animated-gradient"></div>
-    <div class="fixed inset-0 wave wave-1"></div>
-    <div class="fixed inset-0 wave wave-2"></div>
+    <!-- Camadas de animação -->
+    <div class="fixed inset-0 animated-gradient z-0"></div>
+    <div class="fixed inset-0 wave wave-1 z-[1]"></div>
+    <div class="fixed inset-0 wave wave-2 z-[2]"></div>
     
-    <!-- Adicionar um overlay para melhorar a legibilidade -->
-    <div class="fixed inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50"></div>
+    <!-- Overlay -->
+    <div class="fixed inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/50 z-[3]"></div>
 
-    <!-- Adicionar logo após a abertura do body -->
-    <canvas id="gradient-canvas"></canvas>
+    <!-- Canvas -->
+    <canvas id="gradient-canvas" class="z-[4]"></canvas>
 
-    <!-- Envolver todo o conteúdo existente em um div com class content-wrapper -->
-    <div class="content-wrapper">
+    <!-- Content Wrapper -->
+    <div class="content-wrapper relative z-[40] pt-20">
         <!-- Hero Section -->
         <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
             <!-- Conteúdo Principal -->

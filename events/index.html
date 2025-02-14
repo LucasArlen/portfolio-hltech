@@ -23,7 +23,7 @@
 </head>
 <body class="bg-[#0F172A] text-gray-100 overflow-x-hidden">
     <!-- Banner de Template -->
-    <div class="fixed top-0 left-0 right-0 bg-yellow-600 z-50">
+    <div class="fixed top-0 left-0 right-0 bg-yellow-600 z-[60]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row items-center justify-center gap-2 py-3 sm:py-2 text-xs sm:text-sm md:text-base text-white text-center sm:text-left">
                 <p class="max-w-[90%] sm:max-w-none">Este é um template demonstrativo. O design pode ser totalmente personalizado para sua marca.</p>
@@ -32,17 +32,17 @@
     </div>
 
     <!-- Imagem de Fundo com Overlay -->
-    <div class="fixed inset-0 -z-20">
+    <div class="fixed inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a?auto=format&fit=crop&w=2000" 
              alt="Feijoada Background" 
              class="w-full h-full object-cover"
              loading="eager"
         >
     </div>
-    <div class="fixed inset-0 bg-overlay -z-10"></div>
+    <div class="fixed inset-0 bg-overlay z-[1]"></div>
 
     <!-- Hero Section -->
-    <header class="min-h-screen relative flex items-center">
+    <header class="min-h-screen relative flex items-center z-[40] pt-20">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl">
                 <h1 class="text-6xl md:text-8xl font-black mb-6 gradient-text leading-tight">
